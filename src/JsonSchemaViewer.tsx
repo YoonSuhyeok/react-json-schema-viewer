@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 
-interface JsonSchemaProperty {
+export interface JsonSchemaProperty {
   type?: string | string[];
   properties?: Record<string, JsonSchemaProperty>;
   items?: JsonSchemaProperty | JsonSchemaProperty[];
@@ -45,7 +45,7 @@ interface JsonSchemaProperty {
   [key: string]: any; // 추가적인 속성들을 허용
 }
 
-interface SchemaNodeProps {
+export interface SchemaNodeProps {
   name: string;
   schema: JsonSchemaProperty;
   isRequired?: boolean;

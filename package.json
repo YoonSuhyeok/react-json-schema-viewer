@@ -1,15 +1,47 @@
 {
-  "name": "react-json-shcema-viewer",
-  "private": true,
-  "version": "0.0.0",
+  "name": "react-json-schema-viewer",
+  "version": "1.0.0",
+  "description": "A React component for visualizing JSON Schema as an interactive tree with shadcn/ui components",
   "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build-lib": "tsc && vite build --mode lib",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "react",
+    "json-schema",
+    "viewer",
+    "tree",
+    "shadcn",
+    "ui",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/react-json-schema-viewer.git"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.11",
