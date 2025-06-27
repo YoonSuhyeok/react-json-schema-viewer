@@ -15,6 +15,16 @@ const config: StorybookConfig = {
   "framework": {
     "name": "@storybook/react-vite",
     "options": {}
+  },
+  viteFinal: async (config) => {
+    // TailwindCSS가 포함된 Vite 설정 병합
+    config.css = {
+      ...config.css,
+      postcss: {
+        plugins: []
+      }
+    };
+    return config;
   }
 };
 export default config;
