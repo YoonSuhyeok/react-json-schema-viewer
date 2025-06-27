@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build-lib": "tsc && vite build --mode lib",
+    "build-lib": "rm -rf dist && vite build --mode lib && tsc --project tsconfig.lib.json",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -33,11 +33,11 @@
     "ui",
     "typescript"
   ],
-  "author": "Your Name",
+  "author": "Yoon Suhyeok",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/react-json-schema-viewer.git"
+    "url": "https://github.com/YoonSuhyeok/react-json-schema-viewer"
   },
   "peerDependencies": {
     "react": ">=18.0.0",

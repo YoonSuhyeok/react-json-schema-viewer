@@ -33,7 +33,8 @@ export default defineConfig(({ mode }) => {
               'react-dom': 'ReactDOM'
             }
           }
-        }
+        },
+        emptyOutDir: true
       }
     })
   };
