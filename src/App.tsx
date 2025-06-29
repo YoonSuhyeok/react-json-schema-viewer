@@ -3,56 +3,19 @@ import './App.css'
 
 // 테스트용 간단한 JSON Schema
 const sampleSchema = {
-  type: "object",
-  title: "User Profile",
-  description: "A simple user profile schema",
-  properties: {
-    name: {
-      type: "string",
-      description: "The user's full name"
-    },
-    age: {
-      type: "integer",
-      description: "The user's age in years"
-    },
-    email: {
-      type: "string",
-      description: "The user's email address"
-    },
-    isActive: {
-      type: "boolean",
-      description: "Whether the user account is active"
-    },
-    address: {
-      type: "object",
-      description: "The user's address information",
-      properties: {
-        street: {
-          type: "string",
-          description: "Street address"
-        },
-        city: {
-          type: "string",
-          description: "City name"
-        },
-        zipCode: {
-          type: "string",
-          description: "Postal code"
-        }
-      },
-      required: ["street", "city"]
-    },
-    hobbies: {
-      type: "array",
-      description: "List of user's hobbies",
-      items: {
-        type: "string",
-        description: "A hobby"
+  "type": "object",
+  "properties": {
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "number"
       }
     }
   },
-  required: ["name", "email"]
-};
+  "required": ["targets"],
+  "additionalProperties": false
+}
+
 
 function App() {
   return (
